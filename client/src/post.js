@@ -2,7 +2,7 @@ export default function Post() {
     return(
         <div className="post">
         <div className="image">
-        <img src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+        <img src="https://images.pexels.com/photos/2035489/pexels-photo-2035489.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
         </div>
         <div className="texts">
         <h2>React Labs: What We've Been Working On – June 2022</h2>
