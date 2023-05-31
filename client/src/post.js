@@ -1,17 +1,25 @@
-export default function Post() {
-    return(
-        <div className="post">
-        <div className="image">
-        <img src="https://images.pexels.com/photos/2035489/pexels-photo-2035489.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
-        </div>
-        <div className="texts">
-        <h2>React Labs: What We've Been Working On – June 2022</h2>
-        <p className="info">
-          <a className="author">Rodgers Omondi</a>
-          <time>2023-05-06 16:45</time>
-        </p>
-        <p className="summary">React 18 was years in the making, and with it brought valuable lessons for the React team. Its release was the result of many years of research and exploring many paths. Some of those paths were successful; many more were dead-ends that led to new insights. One lesson we’ve learned is that it’s frustrating for the community to wait for new features without having insight into these paths that we’re exploring.</p>
-        </div>
+import {formatISO9075} from "date-fns";
+import {Link} from "react-router-dom";
+
+export default function Post({_id,title,summary,cover,content,createdAt,author}) {
+
+  return (
+    <div className="post">
+      <div className="image">
+        <Link to={`/post/${_id}`}>
+          <img src={'http://localhost:4000/'+cover} alt=""/>
+        </Link>
       </div>
-    )
+      <div className="texts">
+        <Link to={`/post/${_id}`}>
+        <h2>{title}</h2>
+        </Link>
+        <p className="info">
+          <a className="author">{author.username}</a>
+          <time>{formatISO9075(new Date(createdAt))}</time>
+        </p>
+        <p className="summary">{summary}</p>
+      </div>
+    </div>
+  );
 }
