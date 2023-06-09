@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import {useContext, useEffect, useState} from "react";
+import {useContext, useEffect} from "react";
 import {UserContext} from "./UserContext";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 const {setUserInfo,userInfo} = useContext(UserContext);
@@ -12,7 +12,7 @@ useEffect(() => {
         setUserInfo(userInfo);
     });
     });
-}, []);
+}, [setUserInfo]);
 
 function logout() {
     fetch('http://localhost:4000/logout', {
