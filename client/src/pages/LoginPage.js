@@ -30,7 +30,7 @@ if (redirect) {
 }
 return (
     <form className="login" onSubmit={login}>
-    <h1>Login</h1>
+    <h1>Login Here</h1>
     <input type="text"
             placeholder="username"
             value={username}
