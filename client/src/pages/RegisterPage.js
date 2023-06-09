@@ -18,7 +18,7 @@ async function register(ev) {
 }
 return (
     <form className="register" onSubmit={register}>
-    <h1>Register</h1>
+    <h1>Register Here</h1>
     <input type="text"
             placeholder="username"
             value={username}
