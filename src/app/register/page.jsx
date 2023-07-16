@@ -25,7 +25,7 @@ const handleSubmit = async(e) => {
     }
 
     try {
-        const res = await fetch('https://blog-nextjs-13-sud5.vercel.app/api/register', {
+        const res = await fetch('https://chain-chroniclez.vercel.app/api/register', {
             headers: {
                 'Content-Type': 'application/json'
             },
