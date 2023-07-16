@@ -1,0 +1,21 @@
+.container{
+  min-height: calc(100vh - 60px);
+  width: 100%;
+}
+
+.wrapper{
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7.5rem;
+}
+
+.container > h2{
+  text-align: center;
+  color: #333;
+  margin-top: 1.5rem;
+  font-size: 32px;
+}
