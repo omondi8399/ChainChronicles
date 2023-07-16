@@ -12,7 +12,7 @@ yarn dev
 pnpm dev
 ```
 
-Open [https://chain-chronicles.vercel.app](https://chain-chronicles.vercel.app) with your browser to see the result.
+Open [https://chain-chroniclez.vercel.app](https://chain-chroniclez.vercel.app) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
