@@ -20,7 +20,7 @@ const Edit = (ctx) => {
 
     useEffect(() => {
         async function fetchBlog() {
-            const res = await fetch(`https://chain-chroniclez.vercel.app/${ctx.params.id}`)
+            const res = await fetch(`https://chain-chroniclez.vercel.app/api/blog/${ctx.params.id}`)
 
             const blog = await res.json()
 
