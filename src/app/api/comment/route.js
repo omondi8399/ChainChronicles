@@ -15,12 +15,12 @@ export async function POST(req){
     }
 
     try {
-    const body = await req.json()
-    
-    let newComment = await Comment.create(body)
-    newComment = await newComment.populate('authorId')
+       const body = await req.json()
+       
+       let newComment = await Comment.create(body)
+       newComment = await newComment.populate('authorId')
 
-    return new Response(JSON.stringify(newComment), {status: 201})
+       return new Response(JSON.stringify(newComment), {status: 201})
     } catch (error) {
         return new Response(JSON.stringify(null), {status: 500})
     }
