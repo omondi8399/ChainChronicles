@@ -37,7 +37,7 @@ const BlogDetails = (ctx) => {
 
     useEffect(() => {
         async function fetchBlog() {
-            const res = await fetch(`https://chain-chroniclez.vercel.app/${ctx.params.id}`, { cache: 'no-store' })
+            const res = await fetch(`https://chain-chroniclez.vercel.app/api/blog/${ctx.params.id}`, { cache: 'no-store' })
             const blog = await res.json()
 
             setBlogDetails(blog)
@@ -52,7 +52,7 @@ const BlogDetails = (ctx) => {
             const confirmModal = confirm("Are you sure you want to delete your blog?")
 
             if (confirmModal) {
-                const res = await fetch(`https://chain-chroniclez.vercel.app/${ctx.params.id}`, {
+                const res = await fetch(`https://chain-chroniclez.vercel.app/api/blog/${ctx.params.id}`, {
                     headers: {
                         'Authorization': `Bearer ${session?.user?.accessToken}`
                     },
@@ -70,7 +70,7 @@ const BlogDetails = (ctx) => {
 
     const handleLike = async () => {
         try {
-            const res = await fetch(`https://chain-chroniclez.vercel.app/${ctx.params.id}/like`, {
+            const res = await fetch(`https://chain-chroniclez.vercel.app/api/blog/${ctx.params.id}/like`, {
                 headers: {
                     'Authorization': `Bearer ${session?.user?.accessToken}`
                 },
