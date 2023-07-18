@@ -1,5 +1,5 @@
 .container {
-    margin-top: 5rem;
+    margin-top: 2rem;
     height: calc(100vh - 60px);
     width: 100%;
 }
@@ -20,8 +20,8 @@
 
 .wrapper>form {
     margin-top: 2rem;
-    width: 20%;
-    padding: 1.5rem;
+    width: 37%;
+    padding: 2.5rem 9rem;
     border: 1px solid #666;
     border-radius: 8px;
     display: flex;
@@ -29,6 +29,8 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    box-shadow: 0 2px 32px rgb(0 0 0 / 0.2);
+    border-style: none;
 }
 
 .wrapper>form>input {
@@ -36,6 +38,7 @@
     border: none;
     border-bottom: 1px solid #666;
     padding: 0.5rem;
+    width: 19rem;
 }
 
 .submitButton {
@@ -66,6 +69,7 @@
     cursor: pointer;
     text-align: center;
     transition: 150ms;
+    width:14rem;
 }
 
 .registerNow:hover {
