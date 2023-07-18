@@ -1,6 +1,6 @@
 .container {
   margin: 2rem auto 0;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 60px - 280px);
   width: 350px;
 }
 

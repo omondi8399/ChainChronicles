@@ -65,7 +65,7 @@ const Navbar = () => {
                 }}
                 className={classes.login}
               >
-                Log in
+                Login
               </button>
               <button className={classes.register}>
                 <Link href="/register">Register</Link>
