@@ -1,7 +1,7 @@
 .container {
-  margin-top: 2rem;
+  margin: 2rem auto 0;
   height: calc(100vh - 60px);
-  width: 100%;
+  width: 350px;
 }
 
 .wrapper {
@@ -19,19 +19,18 @@
 }
 
 .wrapper > form {
-  margin-top: 2rem;
-    width: 37%;
-    padding: 2.5rem 9rem;
-    border: 1px solid #666;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    box-shadow: 0 2px 32px rgb(0 0 0 / 0.2);
-    border-style: none;
-    
+  /* width: 90%; */
+  margin-top: 20px;
+  padding: 2.5rem 2rem;
+  border: 1px solid #666;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 2px 32px rgb(0 0 0 / 0.2);
+  border-style: none;
 }
 
 .wrapper > form > input {
@@ -39,21 +38,21 @@
   border: none;
   border-bottom: 1px solid #666;
   padding: 0.5rem;
-  width: 19rem
+  width: 19rem;
 }
 
 .submitButton {
   outline: none;
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: bold;
   background-color: #efefef;
   color: #22ab22;
   cursor: pointer;
   transition: 150ms;
   letter-spacing: 0.5px;
-  width: 88px;
+  /* width: 88px; */
 }
 
 .submitButton:hover {
@@ -71,9 +70,17 @@
   cursor: pointer;
   text-align: center;
   transition: 150ms;
-  width:200px
+  width: 200px;
 }
 
 .loginNow:hover {
   color: #555;
+}
+
+.loginNow > span {
+  color: #22ab22;
+}
+
+.loginNow > span:hover {
+  color: #079107;
 }
