@@ -92,3 +92,17 @@
     top: 0.3rem;
     right: 0.3rem;
 }
+.register{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid #e7e7e7;
+    height: 2.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+.register:hover{
+    background-color: #e7e7e7;
+
+}
