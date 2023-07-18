@@ -12,6 +12,7 @@ List any related issues that this pull request addresses or resolves.
 
 ## Screenshots (if applicable)
 If applicable, add screenshots to demonstrate the changes visually.
+## @mentions (if applicable)
 
 ## Additional Notes
 Any additional notes or information about this pull request.
