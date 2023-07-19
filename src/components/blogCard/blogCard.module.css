@@ -1,9 +1,15 @@
+
+
+ /* 480-less    - phone landscape & smaller */
+ @media all and (max-width: 480px) { 
 .container{
-    width: 23%;
-    height: 540px;
+    width: 100%;
+    height: auto;
     box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.15);
     transition: 150ms;
     border-radius: 12px;
+    border: 5px solid yellow;
+    margin: 40px auto;
 }
 
 .container:hover{
@@ -16,6 +22,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .wrapper > .imgContainer > img{
@@ -33,7 +40,7 @@
 }
 
 .blogData > .left > h3{
-    font-size: 28px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 1.5rem;
     margin-bottom: 1.25rem;
@@ -60,5 +67,9 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
 }
+ }

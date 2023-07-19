@@ -50,22 +50,34 @@ const handleSubmit = async(e) => {
 }
 
     return (
-        <div className={classes.container}>
-            <div className={classes.wrapper}>
-                <h2>Register</h2>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder='Username...' onChange={(e) => setUsername(e.target.value)} />
-                    <input type="email" placeholder='Email...' onChange={(e) => setEmail(e.target.value)} />
-                    <input type="password" placeholder='Password...' onChange={(e) => setPassword(e.target.value)} />
-                    <button className={classes.submitButton}>Register</button>
-                    <button className={classes.registerNow} onClick={() => signIn()}>
-                        Already have an account? <br /> Click Here to Login.
-                    </button>
-                </form>
-            </div>
-            <ToastContainer />
+      <div className={classes.container}>
+        <div className={classes.wrapper}>
+          <h2>Register</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className={classes.submitButton}>Register</button>
+            <button className={classes.registerNow} onClick={() => signIn()}>
+              Already have an account? <br /> <span>Click Here to Login.</span>
+            </button>
+          </form>
         </div>
-    )
+        <ToastContainer />
+      </div>
+    );
 }
 
 export default Register

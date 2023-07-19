@@ -10,17 +10,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .wrapper > h2 {
   font-size: 32px;
+  font-weight: bold;
   color: #222;
   letter-spacing: 1px;
+  font-family:"Raleway", sans-serif;
 }
 
 .wrapper > form {
   margin-top: 2rem;
-    width: 37%;
+    width: 100%;
     padding: 2.5rem 9rem;
     border: 1px solid #666;
     border-radius: 8px;
@@ -35,11 +38,13 @@
 }
 
 .wrapper > form > input {
+  width: 100%;
   outline: none;
   border: none;
   border-bottom: 1px solid #666;
   padding: 0.5rem;
-  width: 19rem
+  width: 19rem;
+  font-family:"Raleway", sans-serif;
 }
 
 .submitButton {
@@ -67,6 +72,7 @@
   outline: none;
   border: none;
   font-size: 18px;
+  font-family:"Raleway", sans-serif;
   margin-top: 1.75rem;
   cursor: pointer;
   text-align: center;
@@ -76,4 +82,8 @@
 
 .loginNow:hover {
   color: #555;
+}
+
+.loginNow > span {
+   color: #22ab22;
 }

@@ -40,21 +40,29 @@ const Login = () => {
     }
 
     return (
-        <div className={classes.container}>
-            <div className={classes.wrapper}>
-                <h2>Log In</h2>
-                <form onSubmit={handleSubmit}>
-                    <input type="email" placeholder='Email...' onChange={(e) => setEmail(e.target.value)} />
-                    <input type="password" placeholder='Password...' onChange={(e) => setPassword(e.target.value)} />
-                    <button className={classes.submitButton}>Log in</button>
-                    <Link className={classes.loginNow} href='/register'>
-                        Don&apos;t have an account? <br /> Register now.
-                    </Link>
-                </form>
-            </div>
-            <ToastContainer />
+      <div className={classes.container}>
+        <div className={classes.wrapper}>
+          <h2>Log In</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className={classes.submitButton}>Log in</button>
+            <Link className={classes.loginNow} href="/register">
+              Don&apos;t have an account? <br /> <span>Register now.</span>
+            </Link>
+          </form>
         </div>
-    )
+        <ToastContainer />
+      </div>
+    );
 }
 
 export default Login

@@ -1,38 +1,43 @@
-.container{
+
+
+/*  480-less    - phone landscape & smaller */
+@media all and (max-width: 480px) { 
+.header_container{
     position: sticky;
     z-index: 999;
-    height: 60px;
+    height: 100px;
     width: 100%;
     background-color: white;
     box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
-    align-items: center;
     top: 0;
     left: 0;
 }
 
-.wrapper{
-    width: 85%;
-    margin: 0 auto;
+.nav_Wrapper{
+    width: 95%;
+    padding: 1em;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     position: relative;
 }
 
-.left{
-    font-size: 36px;
+.nav_Logo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
     color: rgb(26, 180, 26);
 }
 
-.right{
+.access_Links{
     display: flex;
+    gap: 10px;
     align-items: center;
-    gap: 1.25rem;
 }
 
-.right > div > img{
+.access_Links > div > img{
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
@@ -58,12 +63,29 @@
 .login{
     outline: none;
     border: none;
-    padding: 0.5rem 1.25rem;
-    font-size: 17px;
+    padding: 0.5rem 0.5rem;
+    font-size: 14px;
+    font-family:"Raleway", sans-serif;
     background-color: #10c142;
     color: #fff;
     border-radius: 12px;
     cursor: pointer;
+}
+
+.register{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-family:"Raleway", sans-serif;
+     font-size: 14px;
+}
+.register:hover{
+    background-color: #e7e7e7;
+
 }
 
 .dropdown{
@@ -92,17 +114,588 @@
     top: 0.3rem;
     right: 0.3rem;
 }
+
+}
+
+
+/*  280-less    - phone landscape & smaller */
+@media all and (max-width: 280px) { 
+.header_container{
+    position: sticky;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.nav_Wrapper{
+    width: 95%;
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav_Logo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 10px;
+    color: rgb(26, 180, 26);
+}
+
+.access_Links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.access_Links > div > img{
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logout{
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #10c142;
+}
+
+.create{
+    color: #444;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.login{
+    outline: none;
+    border: none;
+    padding: 0.3rem 0.3rem;
+    font-size: 12px;
+    font-family:"Raleway", sans-serif;
+    background-color: #10c142;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
 .register{
     background-color: white;
     color: black;
-    padding: 0.5rem 1.25rem;
+    padding: 0.3rem 0.3rem;
     border: 2px solid #e7e7e7;
-    height: 2.5rem;
     border-radius: 20px;
     cursor: pointer;
     letter-spacing: 0.5px;
+    font-family:"Raleway", sans-serif;
+    font-size: 12px;
 }
 .register:hover{
     background-color: #e7e7e7;
 
 }
+
+.dropdown{
+    position: absolute;
+    background-color: #efefef;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    top: 2.5rem;
+    right: -3rem;
+    border-radius: 8px;
+}
+
+.dropdown > :nth-child(2){
+    margin-top: 1rem;
+}
+
+.dropdown > *{
+    cursor: pointer;
+}
+
+.closeIcon{
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+}
+
+
+/* 768-480     - tablet  */
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    .header_container{
+    position: sticky;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.nav_Wrapper{
+    width: 95%;
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav_Logo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(26, 180, 26);
+}
+
+.access_Links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.access_Links > div > img{
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logout{
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #10c142;
+}
+
+.create{
+    color: #444;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.login{
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    font-size: 14px;
+    font-family:"Raleway", sans-serif;
+    background-color: #10c142;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.register{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-family:"Raleway", sans-serif;
+     font-size: 14px;
+}
+.register:hover{
+    background-color: #e7e7e7;
+
+}
+
+.dropdown{
+    position: absolute;
+    background-color: #efefef;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    top: 2.5rem;
+    right: -3rem;
+    border-radius: 8px;
+}
+
+.dropdown > :nth-child(2){
+    margin-top: 1rem;
+}
+
+.dropdown > *{
+    cursor: pointer;
+}
+
+.closeIcon{
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+}
+
+
+/* 1024-768    - tablet landscape */
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+        .header_container{
+    position: sticky;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.nav_Wrapper{
+    width: 95%;
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav_Logo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(26, 180, 26);
+}
+
+.access_Links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.access_Links > div > img{
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logout{
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #10c142;
+}
+
+.create{
+    color: #444;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.login{
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    font-size: 14px;
+    font-family:"Raleway", sans-serif;
+    background-color: #10c142;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.register{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-family:"Raleway", sans-serif;
+     font-size: 14px;
+}
+.register:hover{
+    background-color: #e7e7e7;
+
+}
+
+.dropdown{
+    position: absolute;
+    background-color: #efefef;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    top: 2.5rem;
+    right: -3rem;
+    border-radius: 8px;
+}
+
+.dropdown > :nth-child(2){
+    margin-top: 1rem;
+}
+
+.dropdown > *{
+    cursor: pointer;
+}
+
+.closeIcon{
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+}
+
+  /* 1280-1024   - desktop (default grid) */
+  @media all and (min-width: 1024px) and (max-width: 1280px) { 
+            .header_container{
+    position: sticky;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.nav_Wrapper{
+    width: 95%;
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav_Logo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(26, 180, 26);
+}
+
+.access_Links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.access_Links > div > img{
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logout{
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #10c142;
+}
+
+.create{
+    color: #444;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.login{
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    font-size: 14px;
+    font-family:"Raleway", sans-serif;
+    background-color: #10c142;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.register{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-family:"Raleway", sans-serif;
+     font-size: 14px;
+}
+.register:hover{
+    background-color: #e7e7e7;
+
+}
+
+.dropdown{
+    position: absolute;
+    background-color: #efefef;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    top: 2.5rem;
+    right: -3rem;
+    border-radius: 8px;
+}
+
+.dropdown > :nth-child(2){
+    margin-top: 1rem;
+}
+
+.dropdown > *{
+    cursor: pointer;
+}
+
+.closeIcon{
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+  }
+
+
+   @media all and (min-width: 1280px) {
+                .header_container{
+    position: sticky;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.nav_Wrapper{
+    width: 95%;
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav_Logo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(26, 180, 26);
+}
+
+.access_Links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.access_Links > div > img{
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logout{
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #10c142;
+}
+
+.create{
+    color: #444;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.login{
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    font-size: 14px;
+    font-family:"Raleway", sans-serif;
+    background-color: #10c142;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.register{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-family:"Raleway", sans-serif;
+     font-size: 14px;
+}
+.register:hover{
+    background-color: #e7e7e7;
+
+}
+
+.dropdown{
+    position: absolute;
+    background-color: #efefef;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    top: 2.5rem;
+    right: -3rem;
+    border-radius: 8px;
+}
+
+.dropdown > :nth-child(2){
+    margin-top: 1rem;
+}
+
+.dropdown > *{
+    cursor: pointer;
+}
+
+.closeIcon{
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+   }

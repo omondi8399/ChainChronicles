@@ -18,11 +18,15 @@ export default async function Home() {
     <div className={classes.container}>
       {blogs?.length > 0 && <h2>ChainChronicles&apos;s Blog Website</h2>}
       <div className={classes.wrapper}>
-        {blogs?.length > 0 ? (
-          blogs.map((blog) => <BlogCard key={blog._id} blog={blog} />)
-        ) : (
-          <h3 className={classes.noBlogs}>No blogs are currently in the</h3>
-        )}
+        <div className={classes.blog_Card}>
+          {blogs?.length > 0 ? (
+            blogs.map((blog) => (
+              <BlogCard key={blog._id} blog={blog} className="card" />
+            ))
+          ) : (
+            <h3 className={classes.noBlogs}>No blogs are currently in the</h3>
+          )}
+        </div>
       </div>
     </div>
   );

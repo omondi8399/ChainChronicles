@@ -18,12 +18,12 @@ const Navbar = () => {
   const loggedIn = false;
 
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <h2 className={classes.left}>
+    <div className={classes.header_Container}>
+      <div className={classes.nav_Wrapper}>
+        <h2 className={classes.nav_Logo}>
           <Link href="/">ChainChronicles</Link>
         </h2>
-        <ul className={classes.right}>
+        <ul className={classes.access_Links}>
           {session?.user ? (
             <div>
               <Image
