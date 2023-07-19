@@ -1,6 +1,6 @@
 .container {
   margin-top: 2rem;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 350px);
   width: 100%;
 }
 
@@ -20,29 +20,31 @@
 
 .wrapper > form {
   margin-top: 2rem;
-    width: 37%;
-    padding: 2.5rem 9rem;
-    border: 1px solid #666;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    box-shadow: 0 2px 32px rgb(0 0 0 / 0.2);
-    border-style: none;
-    
+  width: 400px;
+  padding: 2rem;
+  border: 1px solid #666;
+  border-radius: 8px;
+  box-shadow: 0 2px 32px rgb(0 0 0 / 0.2);
+  border-style: none;
+}
+.inputContainer {
+  width: 100%;
+  margin-bottom: 1.7rem;
 }
 
-.wrapper > form > input {
+.inputContainer:first-child {
+  margin-top: 10px;
+}
+
+.inputContainer input {
   outline: none;
   border: none;
   border-bottom: 1px solid #666;
-  padding: 0.5rem;
-  width: 19rem
+  padding: 10px 5px;
+  width: 100%;
 }
 
-.submitButton {
+form .submitButton {
   outline: none;
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
@@ -53,9 +55,20 @@
   cursor: pointer;
   transition: 150ms;
   letter-spacing: 0.5px;
-  width: 88px;
+  width: 100%;
 }
 
+.linkContainer {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+}
+@media screen and (max-width: 700px) {
+  .wrapper > form {
+    width: 100%;
+    padding: 1rem;
+  }
+}
 .submitButton:hover {
   border-color: #22ab22;
   background-color: #22ab22;
@@ -71,7 +84,7 @@
   cursor: pointer;
   text-align: center;
   transition: 150ms;
-  width:200px
+  width: 200px;
 }
 
 .loginNow:hover {
