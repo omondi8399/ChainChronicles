@@ -1,73 +1,94 @@
 .container {
-    margin-top: 5rem;
-    height: calc(100vh - 60px);
-    width: 100%;
+  margin-top: 2rem;
+  height: calc(100vh - 300px);
+  width: 100%;
 }
 
 .wrapper {
-    width: 85%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.wrapper>h2 {
-    font-size: 32px;
-    color: #222;
-    letter-spacing: 1px;
+.wrapper > h2 {
+  font-size: 32px;
+  color: #222;
+  letter-spacing: 1px;
 }
 
-.wrapper>form {
-    margin-top: 2rem;
-    width: 20%;
-    padding: 1.5rem;
-    border: 1px solid #666;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.wrapper > form {
+  margin-top: 2rem;
+  width: 400px;
+  padding: 2rem;
+  border: 1px solid #666;
+  border-radius: 8px;
+  box-shadow: 0 2px 32px rgb(0 0 0 / 0.2);
+  border-style: none;
+  margin-bottom: 1rem;
 }
 
-.wrapper>form>input {
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #666;
-    padding: 0.5rem;
+.inputContainer {
+  width: 100%;
+  margin-bottom: 1.7rem;
 }
 
-.submitButton {
-    outline: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
-    font-size: 17px;
-    font-weight: bold;
-    background-color: #efefef;
-    color: #22ab22;
-    cursor: pointer;
-    transition: 150ms;
-    letter-spacing: 0.5px;
+.inputContainer:first-child {
+  margin-top: 10px;
+}
+
+.inputContainer input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+form .submitButton {
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: #efefef;
+  color: #22ab22;
+  cursor: pointer;
+  transition: 150ms;
+  letter-spacing: 0.5px;
+  width: 100%;
 }
 
 .submitButton:hover {
-    border-color: #22ab22;
-    background-color: #22ab22;
-    color: #efefef;
+  border-color: #22ab22;
+  background-color: #22ab22;
+  color: #efefef;
 }
 
+form .text {
+  text-align: center;
+  padding-bottom: 5px;
+}
 .registerNow {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    margin-top: 1.75rem;
-    cursor: pointer;
-    text-align: center;
-    transition: 150ms;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  margin-top: 1.75rem;
+  cursor: pointer;
+  text-align: center;
+  transition: 150ms;
+  width: 14rem;
 }
 
 .registerNow:hover {
-    color: #555;
+  color: #555;
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper > form {
+    width: 100%;
+    padding: 1rem;
+  }
 }
