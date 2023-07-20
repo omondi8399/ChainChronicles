@@ -8,9 +8,13 @@
   width: 85%;
   margin: 0 auto;
   margin-top: 2.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: .725rem;
+ /* media query */
+  @media (max-width: 768px) {
+    justify-items: center;
+  }
 }
 
 .container > h2{

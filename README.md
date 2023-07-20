@@ -67,3 +67,25 @@ Feel free to check the [issues page](../../issues/).
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+<!-- 
+<div className={classes.blog_card}>
+      <Link href={`/blog/${_id}`}>
+      <div className={classes.blog_card-image}>
+          <Image src={imageUrl} width="350" height="350" />
+      </div>
+      
+          <div className={classes.blog_card-content}>
+            <h3 className={classes.blog_card-title}>{title}</h3>
+            <p className={classes.blog_card-describtion}>{desc}</p>
+            <span>Created By: <span>1th of January</span></span>
+          </div>
+          <div className={classes.blog_card-likes}>
+            {blogLikes} {" "} {isLiked
+              ? (<AiFillLike onClick={handleLike} size={20} />)
+              : (<AiOutlineLike onClick={handleLike} size={20} />)}
+          </div>
+         </Link>
+    </div> -->
