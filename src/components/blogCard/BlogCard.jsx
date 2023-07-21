@@ -43,26 +43,27 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
   }
 
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <Link className={classes.imgContainer} href={`/blog/${_id}`}>
-          <Image src={imageUrl} width="350" height="350" />
+    <div className="bg-white rounded-lg shadow-md p-4">
+      <div className="relative w-64 h-64 mx-auto">
+        <Link href={`/blog/${_id}`}>
+          <Image src={imageUrl} layout="fill" className="object-cover rounded-lg" />
         </Link>
-        <div className={classes.blogData}>
-          <div className={classes.left}>
-            <h3>{title}</h3>
-            <p>{desc}</p>
-            <span>Created By: <span>1th of January</span></span>
-          </div>
-          <div className={classes.right}>
-            {blogLikes} {" "} {isLiked
-              ? (<AiFillLike onClick={handleLike} size={20} />)
-              : (<AiOutlineLike onClick={handleLike} size={20} />)}
-          </div>
-        </div>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p className="mt-2">{desc}</p>
+        <span className="text-gray-500 mt-2 block">Created By: <span className="font-semibold">1st of January</span></span>
+      </div>
+      <div className="flex items-center justify-between mt-4">
+        <span className="text-gray-500">{blogLikes} Likes</span>
+        {isLiked ? (
+          <AiFillLike className="text-blue-500 cursor-pointer" size={20} onClick={handleLike} />
+        ) : (
+          <AiOutlineLike className="text-blue-500 cursor-pointer" size={20} onClick={handleLike} />
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default BlogCard

@@ -15,14 +15,16 @@ export default async function Home() {
   const blogs = await fetchBlogs();
 
   return (
-    <div className={classes.container}>
-      {blogs?.length > 0 && <h2>ChainChronicles&apos;s Blog Website</h2>}
-      <div className={classes.wrapper}>
-        {blogs?.length > 0 ? (
-          blogs.map((blog) => <BlogCard key={blog._id} blog={blog} />)
-        ) : (
-          <h3 className={classes.noBlogs}>No blogs are currently in the</h3>
-        )}
+    <div className="bg-gray-100 min-h-screen py-8">
+      <div className="container mx-auto px-4 lg:px-8">
+        {blogs?.length > 0 && <h2 className="text-3xl font-bold mb-8">ChainChronicles&apos;s Blog Website</h2>}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {blogs?.length > 0 ? (
+            blogs.map((blog) => <BlogCard key={blog._id} blog={blog} />)
+          ) : (
+            <h3 className="text-2xl font-semibold text-center">No blogs are currently available</h3>
+          )}
+        </div>
       </div>
     </div>
   );
