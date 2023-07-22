@@ -1,7 +1,6 @@
 'use client'
-
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import { useRouter } from 'next/navigation'
+import React, { useState } from 'react'
 import { AiOutlineFileImage } from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
