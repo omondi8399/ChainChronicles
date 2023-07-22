@@ -6,12 +6,10 @@ const Footer = () => {
       <div className="container mx-auto py-8 px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="col">
-            <h2 className="text-xl font-bold">About the App</h2>
+            <h2 className="text-xl font-bold text-green-500">ChainChronicles</h2>
             <p className="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptates velit fuga perspiciatis itaque iste, aliquid dignissimos voluptate modi,
-              tempore assumenda adipisci dolor hic atque quod consequuntur cupiditate.
-              Quasi, nobis veritatis!
+            Welcome to ChainChronicles, <br /> the community-driven app that offers a diverse collection of captivating articles. Discover and share knowledge with like-minded individuals,
+             as we unite through the art of storytelling.
             </p>
           </div>
           <div className="col">
