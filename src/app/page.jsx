@@ -3,7 +3,7 @@ import { blogs } from "@/lib/data";
 import Image from "next/image";
 import HeroSection from "@/components/hero/HeroSection";
 import Loader from "@/components/loader/Loader";
-import TrendingSection from "@/components/trendingSection/trendingSection";
+import TrendingSection from "@/components/trendingSection/TrendingSection";
 
 export async function fetchBlogs() {
   const res = await fetch("https://chain-chroniclez.vercel.app/api/blog", {
