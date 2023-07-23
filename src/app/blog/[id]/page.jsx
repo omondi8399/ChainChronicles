@@ -142,121 +142,6 @@ const BlogDetails = (ctx) => {
     }
   };
 
-<<<<<<< HEAD
-  return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <Image src={blogDetails?.imageUrl} width="750" height="650" />
-        <div></div>
-        <div className={classes.btns}>
-          <h3 className={classes.title}>{blogDetails?.title}</h3>
-          {blogDetails?.authorId?._id.toString() ===
-          session?.user?._id.toString() ? (
-            <div className={classes.controls}>
-              <Link
-                className={classes.editButton}
-                href={`/blog/edit/${ctx.params.id}`}
-              >
-                Edit <BsFillPencilFill />
-              </Link>
-              <button onClick={handleDelete} className={classes.deleteButton}>
-                Delete
-                <AiFillDelete />
-              </button>
-            </div>
-          ) : (
-            <div className={classes.author}>
-              Author: <span>{blogDetails?.authorId?.username}</span>
-            </div>
-          )}
-        </div>
-        <div className={classes.likeBlock}>
-          <div className={classes.category}>
-            Category:
-            <span>{blogDetails?.category}</span>
-          </div>
-          <div className={classes.right}>
-            {blogLikes}{" "}
-            {isLiked ? (
-              <AiFillLike size={20} onClick={handleLike} />
-            ) : (
-              <AiOutlineLike size={20} onClick={handleLike} />
-            )}
-          </div>
-        </div>
-        <div className={classes.row}>
-          <p>{blogDetails?.desc}</p>
-          <span>
-            Posted: <span>{format(blogDetails?.createdAt)}</span>
-          </span>
-        </div>
-        <div className={classes.commentSection}>
-          <div className={classes.commentInput}>
-            <Image src={person} width="45" height="45" alt="" />
-            <input
-              value={commentText}
-              type="text"
-              placeholder="Type message..."
-              onChange={(e) => setCommentText(e.target.value)}
-            />
-            <button onClick={handleComment}>Post</button>
-          </div>
-          <div className={classes.comments}>
-            {comments?.length > 0 ? (
-              comments.map((comment) => (
-                <Comment
-                  key={comment._id}
-                  comment={comment}
-                  setComments={setComments}
-                />
-              ))
-            ) : (
-              <h4 className={classes.noComments}>
-                No comments. Be the first one to leave a comment!
-              </h4>
-            )}
-          </div>
-        </div>
-      </div>
-      <ToastContainer />
-    </div>
-  );
-};
-=======
-    const handleComment = async () => {
-        if(commentText?.length < 2){
-            toast.error("Comment must be at least 2 characters long")
-            return
-        }
-
-        try {
-            const body = {
-                blogId: ctx.params.id,
-                authorId: session?.user?._id,
-                text: commentText
-            }
-
-            const res = await fetch(`https://chain-chroniclez.vercel.app/api/comment`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${session?.user?.accessToken}`
-                },
-                method: "POST",
-                body: JSON.stringify(body)
-            })
-
-            const newComment = await res.json()
-
-            setComments((prev) => {
-                return [newComment, ...prev]
-            })
-            
-            setCommentText("")
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
     return (
         <div className="bg-gray-100 min-h-screen py-8">
           <div className="container mx-auto px-4 lg:px-8">
@@ -328,6 +213,5 @@ const BlogDetails = (ctx) => {
         </div>
       );
 }
->>>>>>> d29ff09a229363c91bf236aa69db025293ede9b0
 
 export default BlogDetails;
