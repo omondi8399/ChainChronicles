@@ -1,6 +1,6 @@
 import { ImPhone, ImTwitter, ImGithub } from 'react-icons/im';
 import Link from 'next/link';
-import Newsletter from '../misc/Newsletter';
+import Newsletter from '../misc/newsletter';
 
 export default function Footer() {
 
