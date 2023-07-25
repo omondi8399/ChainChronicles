@@ -9,24 +9,24 @@ export const blogs = [
         title: 'Blog 1',
         desc: 'lorem ipsum',
         img: img1,
-        authorId: 'someauthorid',
+        authorId: 'author1',
     },
     {
         title: 'Blog 2',
         desc: 'lorem ipsumsdds',
         img: img2,
-        authorId: 'someauthorid',
+        authorId: 'author2',
     },
     {
         title: 'Blog 3',
         desc: 'lorem ipsumsddsdssdsd',
         img: img3,
-        authorId: 'someauthorid',
+        authorId: 'author3',
     },
     {
         title: 'Blog 4',
         desc: 'lorem ipsumdsdsdssdsd',
         img: img4,
-        authorId: 'someauthorid',
+        authorId: 'author4',
     },
 ]

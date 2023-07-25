@@ -1,36 +1,31 @@
-import React from "react";
-import classes from "./footer.module.css";
+import { ImPhone, ImTwitter, ImGithub } from 'react-icons/im';
+import Link from 'next/link';
+import Newsletter from '../misc/newsletter';
 
-const Footer = () => {
+export default function Footer() {
+
+  const bg = {
+    backgroundImage: "url('/images/footer.png')",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'bottom left',
+  }
+
   return (
-    <footer className={classes.footer}>
-      <div className={classes.wrapper}>
-        <div className={classes.col}>
-          <h2>About the App</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates
-            velit fuga perspiciatis itaque iste, aliquid dignissimos voluptate
-            modi, tempore assumenda adipisci dolor hic atque quod consequuntur
-            cupiditate. Quasi, nobis veritatis!
-          </p>
-        </div>
-        <div className={classes.content}>
-          <div className={classes.col}>
-            <h2>Contact</h2>
-            <span>Phone +254 707 606 757</span>
-            <span>Twitter: DevRojas</span>
-            <span>Github: omondi8399</span>
+    <footer className="bg-gray-800" style={bg}>
+      <Newsletter />
+      <div className="container mx-auto flex justify-center py-8">
+        <div className="py-8">
+          <div className="flex gap-6 justify-center">
+            <Link href={"/"}><ImPhone className="text-gray-300 hover:text-white cursor-pointer" size={24} /></Link>
+            <Link href={"https://twitter.com/DevRojas"} target={"_blank"} rel={"noopener noreferrer"}><ImTwitter className="text-gray-300 hover:text-white cursor-pointer" size={24} /></Link>
+            <Link href={"https://github.com/omondi8399"} target={"_blank"} rel={"noopener noreferrer"}><ImGithub className="text-gray-300 hover:text-white cursor-pointer" size={24} /></Link>
           </div>
-          <div className={classes.col}>
-            <h2>Location</h2>
-            <span>Continent: Africa</span>
-            <span>Country: Kenya</span>
-            <span>Current Location: Kenya</span>
-          </div>
+
+          <p className='py-2 text-gray-400 text-center'>@ 2023. All rights reserved.</p>
+          <p className='text-gray-400 text-center'> Welcome to ChainChronicles </p>
+          <p className='text-gray-400 text-center'> Location: Nairobi, Kenya</p>
         </div>
       </div>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}
