@@ -1,0 +1,172 @@
+.hero {
+  width: 100%;
+  margin: auto;
+  min-height: 400px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(90deg, #0006, #3336),
+    url("./../../../public/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  flex: 1;
+  color: #fff;
+}
+
+.row h1 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.row:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row .icon {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ccc;
+}
+.icon:first-child {
+  /* messenger */
+  background-color: #0078ff;
+}
+.icon:nth-child(2) {
+  /* whatsapp */
+  background-color: #25d366;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.3rem;
+}
+
+.filters form {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters form input {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search {
+  position: absolute;
+  left: 0.4rem;
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filters nav {
+  flex: 2;
+}
+
+.filters nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+.filters nav ul li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.filters nav ul li:hover {
+  background-color: #22ab22;
+  color: #fff;
+}
+
+.filters nav ul li.active {
+  background-color: #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    width: 95%;
+    padding: 1rem;
+    background-position: left;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+  .row {
+    text-align: center;
+  }
+
+  .row:last-child {
+    margin-top: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+  .filters form {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .filters nav {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  .filters nav ul {
+    justify-content: initial;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    overflow-x: scroll;
+  }
+
+  .filters nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}

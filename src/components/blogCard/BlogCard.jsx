@@ -46,7 +46,7 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
     <div className="bg-white rounded-lg shadow-md p-4">
       <div className="relative w-64 h-64 mx-auto">
         <Link href={`/blog/${_id}`}>
-          <Image src={imageUrl} layout="fill" className="object-cover rounded-lg" />
+          <Image src={imageUrl} layout="fill" alt="image" className="object-cover rounded-lg" />
         </Link>
       </div>
       <div className="mt-4">
