@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(90deg, #0006, #3336),
-    url("./../../../public/hero.jpg");
+    url("./../../../public/hero-removebg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
