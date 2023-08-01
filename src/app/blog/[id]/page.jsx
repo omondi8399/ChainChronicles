@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import classes from "./blog.module.css";
 import { BsFillPencilFill } from "react-icons/bs";
 import { AiFillDelete, AiFillLike, AiOutlineLike } from "react-icons/ai";
 import Link from "next/link";
@@ -143,10 +142,10 @@ const BlogDetails = (ctx) => {
   };
 
     return (
-        <div className="bg-gray-100 min-h-screen py-8">
+        <div className="bg-gray-900 min-h-screen py-8">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="bg-white p-4 md:p-8 rounded-lg shadow-md">
-              <Image src={blogDetails?.imageUrl} width="750" height="650" />
+            <div className="bg-gray-900 p-4 md:p-8 rounded-lg shadow-md">
+              <Image src={blogDetails?.imageUrl} alt="blog details" width="750" height="650" />
               <div className="flex justify-between items-center mt-4 md:mt-8">
                 <h3 className="text-2xl font-bold">{blogDetails?.title}</h3>
                 {blogDetails?.authorId?._id.toString() === session?.user?._id.toString() ? (

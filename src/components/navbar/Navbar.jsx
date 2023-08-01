@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { signIn, signOut, useSession } from "next-auth/react";
 import person from "../../../public/person.jpg";
+import ChainChron from "../../../public/images/ChainChron.png";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -17,12 +18,12 @@ const Navbar = () => {
   const loggedIn = false;
 
   return (
-    <div className="sticky top-0 z-50 bg-white shadow-md">
+    <div className="sticky top-0 z-50 bg-gray-900 shadow-md">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <h2 className="text-2xl font-bold text-green-600">ChainChronicles</h2>
+              <Image src={ChainChron} alt="logo" width="150" height="150" />
             </Link>
           </div>
           <div className="md:hidden flex items-center">
@@ -57,7 +58,7 @@ const Navbar = () => {
           </div>
           <ul
             className={`md:flex items-center gap-4 ${
-              showMobileMenu ? "flex flex-col absolute top-16 left-0 w-full bg-white z-10" : "hidden"
+              showMobileMenu ? "flex flex-col absolute top-16 left-0 w-full bg-gray-900 z-10" : "hidden"
             } md:flex md:items-center md:gap-4 md:relative`}
           >
             {session?.user ? (
@@ -97,18 +98,17 @@ const Navbar = () => {
               </div>
             ) : (
               <>
-                <button
-                  onClick={() => {
-                    signIn();
-                  }}
-                  className="px-4 py-2 bg-green-600 text-white font-semibold rounded-md"
-                >
-                  Log in
-                </button>
-                <button className="border-2 border-gray-300 px-4 py-2 rounded-md">
-                  <Link href="/register">Register</Link>
-                </button>
-              </>
+              <button onClick={() => {signIn();}} class="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-blue-500">
+<span class="absolute inset-0 w-full h-full bg-gradient-to-br from-green-400 to-blue-500"></span>
+<span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-green-500 rounded-full opacity-30 group-hover:rotate-180 ease"></span>
+<span class="relative text-white">Log In</span>
+</button>
+              <button class="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-blue-500">
+<span class="absolute inset-0 w-full h-full bg-gradient-to-br from-green-400 to-blue-500"></span>
+<span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-green-500 rounded-full opacity-30 group-hover:rotate-180 ease"></span>
+<Link href="/register" class="relative text-white">Register</Link>
+</button>
+            </>
             )}
           </ul>
         </div>

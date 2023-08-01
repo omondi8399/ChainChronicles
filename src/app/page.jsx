@@ -4,6 +4,7 @@ import Image from "next/image";
 import HeroSection from "@/components/hero/HeroSection";
 import Loader from "@/components/loader/Loader";
 import TrendingSection from "@/components/trendingSection/TrendingSection";
+import ScrollToTopButton from "@/components/scrollTop/scrollTop";
 
 export async function fetchBlogs() {
   const res = await fetch("https://chain-chroniclez.vercel.app/api/blog", {
@@ -17,12 +18,12 @@ export default async function Home() {
   const blogs = await fetchBlogs();
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-900">
       <div className="container mx-auto">
         <HeroSection />
         <TrendingSection />
         {blogs?.length > 0 && (
-          <h2 className="text-center text-gray-800 text-4xl mt-6">
+          <h2 className="text-center text-white text-3xl mt-6">
             ChainChronicles&apos;s Blog Website
           </h2>
         )}
@@ -40,6 +41,7 @@ export default async function Home() {
             </div>
           )}
         </div>
+        <ScrollToTopButton />
       </div>
     </div>
   );
