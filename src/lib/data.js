@@ -7,26 +7,28 @@ import img4 from '../../public/nature4.jpg'
 export const blogs = [
     {
         title: 'Blog 1',
-        desc: 'lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Distinctio dolores error iure perferendis sequi totam Ad aliquam aperiam atque deleniti dolor dolorem enim esse et in inventore itaque pariatur reprehenderit',
         img: img1,
         authorId: 'author1',
     },
     {
         title: 'Blog 2',
-        desc: 'lorem ipsumsdds',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Distinctio dolores error iure perferendis sequi totam Ad aliquam aperiam atque deleniti dolor dolorem enim esse et in inventore itaque pariatur reprehenderit',
         img: img2,
         authorId: 'author2',
     },
     {
         title: 'Blog 3',
-        desc: 'lorem ipsumsddsdssdsd',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Distinctio dolores error iure perferendis sequi totam Ad aliquam aperiam atque deleniti dolor dolorem enim esse et in inventore itaque pariatur reprehenderit',
         img: img3,
         authorId: 'author3',
     },
     {
         title: 'Blog 4',
-        desc: 'lorem ipsumdsdsdssdsd',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Distinctio dolores error iure perferendis sequi totam Ad aliquam aperiam atque deleniti dolor dolorem enim esse et in inventore itaque pariatur reprehenderit',
         img: img4,
         authorId: 'author4',
     },
 ]
+
+
