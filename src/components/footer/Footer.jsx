@@ -2,7 +2,6 @@ import { ImPhone, ImTwitter, ImGithub } from 'react-icons/im';
 import Link from 'next/link';
 import Image from 'next/image';
 import Newsletter from '../misc/newsletter';
-import ChainChron from "../../../public/images/ChainChron.png";
 
 export default function Footer() {
 
@@ -20,13 +19,7 @@ export default function Footer() {
           <p className='py-2 text-white text-center'>@ 2023. All rights reserved.</p>
           <p className='text-white text-center'> Welcome to ChainChronicles </p>
           <p className='text-white text-center'> Location: Nairobi, Kenya</p>
-          <Image
-            src={ChainChron}
-            alt="logo"
-            width="150"
-            height="150"
-            className="py-6 mx-auto"
-          />
+          <h2 className="text-2xl font-bold text-green-600 text-center">ChainChronicles</h2>
         </div>
       </div>
     </footer>
