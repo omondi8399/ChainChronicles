@@ -8,10 +8,10 @@ export default function Newsletter() {
           <input type="text" className="shadow border rounded w-full md:w-9/12 py-3 px-3 text-gray-700 focus:outline-none focus:shadow-outline" placeholder="Enter your Email"/>
         </div>
 
-        <button className="bg-green-600 px-10 py-3 rounded-full text-gray-50 text-lg">
+        <button className="relative bg-gradient-to-br from-green-600 to-blue-500 hover:from-green-700 hover:to-blue-600 hover:scale-105 px-10 py-3 rounded-full text-gray-50 text-lg transition-all ease-out duration-300">
           Subscribe
         </button>
       </div>
     </section>
-  )
+  );
 }

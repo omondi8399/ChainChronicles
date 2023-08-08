@@ -83,7 +83,7 @@ const CreateBlog = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen py-8">
+    <div className="bg-gray-900 min-h-screen py-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="bg-white p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-6">Create Post</h2>

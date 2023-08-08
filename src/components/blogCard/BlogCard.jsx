@@ -1,9 +1,7 @@
-'use client'
-
+"use client";
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import classes from './blogCard.module.css'
 import { useSession } from 'next-auth/react'
 import { AiFillLike, AiOutlineLike } from 'react-icons/ai'
 
@@ -11,7 +9,6 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
   const { data: session } = useSession()
   const [isLiked, setIsLiked] = useState(false)
   const [blogLikes, setBlogLikes] = useState(0)
-
 
   useEffect(() => {
     session && likes && setIsLiked(likes.includes(session?.user?._id))
@@ -43,18 +40,23 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4">
-      <div className="relative w-64 h-64 mx-auto">
-        <Link href={`/blog/${_id}`}>
-          <Image src={imageUrl} layout="fill" alt="image" className="object-cover rounded-lg" />
-        </Link>
-      </div>
-      <div className="mt-4">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2">{desc}</p>
-        <span className="text-gray-500 mt-2 block">Created By: <span className="font-semibold">1st of January</span></span>
-      </div>
-      <div className="flex items-center justify-between mt-4">
+    <div className="relative flex w-full h-[500px] mx-auto mt-10">
+      <div className="rounded-xl w-full bg-gradient-to-r p-[5px] from-green-400 to-blue-500">
+        <div className="flex flex-col justify-between h-full bg-black rounded-lg p-4">
+          <div className="flex flex-col justify-center text-white">
+            <div className="relative w-64 h-52 mx-auto">
+              <Link href={`/blog/${_id}`}>
+                <Image src={imageUrl} layout="fill" alt="image" className="object-cover rounded-lg" />
+              </Link>
+            </div>
+            <h1 className="text-3xl font-extrabold mb-4">
+              {title}
+            </h1>
+            <p className="text-lg md:text-lg font-medium mb-6">
+              {desc}
+            </p>
+          </div>
+          <div className="flex items-center justify-between mt-4">
         <span className="text-gray-500">{blogLikes} Likes</span>
         {isLiked ? (
           <AiFillLike className="text-blue-500 cursor-pointer" size={20} onClick={handleLike} />
@@ -62,8 +64,15 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
           <AiOutlineLike className="text-blue-500 cursor-pointer" size={20} onClick={handleLike} />
         )}
       </div>
+          <div className="flex w-full justify-between mb-4">
+            <p className="text-lg mr-5 font-semibold text-white flex items-center justify-center">
+              1st of January
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default BlogCard
+export default BlogCard;
