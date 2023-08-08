@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { signIn, signOut, useSession } from "next-auth/react";
 import person from "../../../public/person.jpg";
-import ChainChron from "../../../public/images/ChainChron.png";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -23,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <Image src={ChainChron} alt="logo" width="150" height="150" />
+              <h2 className="text-2xl font-bold text-green-600">ChainChronicles</h2>
             </Link>
           </div>
           <div className="md:hidden flex items-center">
